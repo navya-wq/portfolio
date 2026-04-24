@@ -1,0 +1,131 @@
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px;
+    flex-wrap: wrap;
+}
+
+/* Left */
+.hero-left {
+    max-width: 50%;
+}
+
+.tag {
+    background: #ffe0b2;
+    padding: 6px 12px;
+    border-radius: 20px;
+    display: inline-block;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 40px;
+    line-height: 1.3;
+}
+
+.name {
+    color: #222;
+}
+
+.highlight {
+    color: #f57c00;
+}
+
+.desc {
+    margin: 15px 0;
+    color: #555;
+    max-width: 400px;
+}
+
+/* Buttons */
+.btn {
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.primary {
+    background: #f57c00;
+    color: white;
+}
+
+.secondary {
+    background: #e0e0e0;
+    color: black;
+}
+
+/* Stats */
+.stats {
+    display: flex;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.stats h2 {
+    color: #f57c00;
+    margin: 0;
+}
+
+.stats p {
+    margin: 0;
+    font-size: 13px;
+}
+
+/* Right */
+.hero-right {
+    position: relative;
+}
+
+.hero-right img {
+    width: 280px;
+    border-radius: 50%;
+    border: 6px solid #ffe0b2;
+}
+
+/* Floating badges */
+.badge {
+    position: absolute;
+    background: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    animation: float 3s ease-in-out infinite;
+}
+
+.dev {
+    top: 10%;
+    right: -20px;
+}
+
+.design {
+    bottom: 10%;
+    left: -20px;
+}
+
+/* Animation */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-left {
+        max-width: 100%;
+    }
+
+    .hero-right img {
+        margin-top: 20px;
+    }
+}
